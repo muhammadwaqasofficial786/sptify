@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify- My Favourite Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="./spotify meterial/spotify_logo_icon_189218.png" alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+
+    </nav>
+    <div class="container">
+        <div class="songlist">
+            <h1>Best Music - No Copy Rights</h1>
+            <div class="class">Songitems
+                <img src="./spotify meterial/music.jpg" alt="0" width="100%" height="70%">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="audio-player">
+        <audio id="myAudio">
+            <source src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="controls">
+            <div class="song-info">
+                <span id="songName"></span>
+            </div>
+            <div class="icon">
+                <i class="fa-regular fa-circle-play"></i>
+                <i class="fa-solid fa-pause"></i>
+                
+            </div>
+            <div class="playback-controls">
+                <button id="playPauseBtn" class="fa-solid fa-play-pause" onclick="toggleAudio()"></button>
+                <button id="autoNextBtn" onclick="autoNext()">Auto Next</button>
+                <input type="range" id="volumeControl" min="0" max="100" step="1" onchange="changeVolume()">
+            </div>
+        </div>
+        <div class="playlist">
+            <ul id="musicList">
+                <li><button onclick="playSong('spotify_meterial/song1.mp3')">Song 1</button></li>
+                <li><button onclick="playSong('spotify_meterial/song2.mp3')">Song 2</button></li>
+                <li><button onclick="playSong('spotify_meterial/song3.mp3')">Song 3</button></li>
+                <!-- Add more songs here -->
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        var audio = document.getElementById("myAudio");
+        var playPauseBtn = document.getElementById("playPauseBtn");
+        var songNameDisplay = document.getElementById("songName");
+        var volumeControl = document.getElementById("volumeControl");
+    
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.textContent = "Pause";
+            } else {
+                audio.pause();
+                playPauseBtn.textContent = "Play";
+            }
+        }
+    
+        function autoNext() {
+            // Implement your logic for autoplaying the next track here
+            // This function will be called when the "Auto Next" button is clicked
+            console.log("Autoplay next track logic here");
+        }
+    
+        function changeVolume() {
+            // Adjust system volume when the volume button is clicked
+            console.log("Adjust system volume here");
+        }
+    
+        function playSong(songSrc) {
+            audio.src = songSrc;
+            audio.play();
+            playPauseBtn.textContent = "Pause";
+            // Display song name
+            var songName = songSrc.split('/').pop().split('.')[0]; // Extracting song name from URL
+            songNameDisplay.textContent = songName;
+        }
+    </script>
+        
+    
+
+
+
+        <script src="https://kit.fontawesome.com/8dd433d1fd.js" crossorigin="anonymous"></script>
+
+    <script src="Script.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

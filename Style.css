@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+body{
+    background-color: rgb(232, 195, 195);
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+nav{
+font-family: 'ubuntu' , sans-serif;
+}
+nav ul{
+   display: flex;
+   align-items: center;
+   list-style-type: none;
+   height: 93px;
+   background-color: black;
+   color: white;
+}
+nav ul li{
+    padding: 0 12px;
+}
+
+.brand img{
+    width: 101px;
+    padding: 0 8px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.container{
+min-height: 77vh;
+background-color: black;
+color: white;
+font-family: 'Verdana Round', sans-serif;
+display: flex;
+margin: 7% auto;
+width: 90%;
+border-radius: 35px;
+padding: 34px;
+background-image: url('sanket.jpg');
+
+}
+.playback-controls{
+width: 50px;
+padding-left: 50%;
+}
+.playlist{
+    width: 700px;
+padding-left: 50%;
+}
+.bottom{
+position: sticky;
+height: 106px;
+background-color: black;
+color: white;
+bottom: 0;
+display: flex;
+justify-content: center;
+align-items: left;
+flex-direction: column;
+
+}
+#MyProgressbar{
+    width: 80vw;
+
+}
